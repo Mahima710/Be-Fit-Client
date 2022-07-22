@@ -1,0 +1,144 @@
+.mover {
+    -webkit-animation: mover 2s infinite alternate;
+    animation: mover 2s infinite alternate;
+}
+
+.mid {
+    width: 90%;
+    margin: 0px auto;
+    font-family: Verdana, Geneva, sans-serif;
+    padding: 10px;
+
+}
+
+
+.mid h1 {
+    margin: 50px auto;
+    color: #5c8a3f;
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+}
+
+.mid h1:before {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 4px;
+    background: #9881a5;
+    left: 90px;
+    top: 50%;
+    position: absolute;
+}
+
+.mid h1:after {
+
+    content: "";
+    display: block;
+    width: 140px;
+    height: 5px;
+    background: #9881a5;
+    right: 90px;
+    top: 50%;
+    position: absolute;
+}
+
+.fancy-title {
+    line-height: 0.5;
+    text-align: center;
+}
+
+.fancy-title span {
+    display: inline-block;
+    position: relative;
+    color: #ff1201;
+}
+
+.fancy-title span:before,
+.fancy-title span:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    top: 0;
+    width: 60px;
+}
+
+.fancy-title span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.fancy-title span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+
+
+.heading {
+    background-image: linear-gradient(to right, #020d57, #02155c 50%, #000 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    padding: 5px 0;
+    position: relative;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.heading:before {
+    content: '';
+    background: #9e54d6;
+    position: absolute;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.heading:hover {
+    background-position: 0;
+}
+
+.heading:hover::before {
+    width: 100%;
+}
+
+.stitched {
+    padding: 20px;
+    margin: 10px;
+    font-size: 21px;
+    line-height: 2em;
+    border: 2px dashed rgb(2, 223, 120);
+    border-radius: 10px;
+    font-weight: normal;
+}
+
+@-webkit-keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+@media screen and (max-width:500px) {
+    .ladyimg {
+        margin: auto;
+        width: 80vw !important;
+    }
+}
